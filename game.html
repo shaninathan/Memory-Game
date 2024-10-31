@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>מהלך המשחק</title>
+    <link href="../Css/CSgame.css" rel="stylesheet" />
+    <script src="../JS/JSgame.js" defer></script>
+</head>
+<body onload="ShowDetails()">
+    <div class="background"></div>
+
+    <div class="header">
+        <h2>מהלך המשחק</h2>
+        <div id="gameDetails">
+            <h3 id="themeDetails"></h3>
+            <h3 id="numPlayersDetails" style="display: inline;"></h3>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="playersDetails"></div>
+        <div id="cardsContainer" style="text-align: center; margin: 20px auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;"></div>
+    </div>
+</body>
+</html>

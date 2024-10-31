@@ -1,0 +1,269 @@
+﻿body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffefba, #ffffff); 
+    overflow-x: hidden; 
+}
+
+.header {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff6f91); 
+    color: white;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeIn 1s ease-in-out; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.header h2,
+.header h3 {
+    margin: 0;
+    padding: 3px 0;
+    line-height: 1.2;
+    font-family: 'Verdana', sans-serif;
+    font-weight: bold; 
+    color: #ff6f91;
+    background-color: #feb47b;
+    padding: 6px;
+    border-radius: 5px; 
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: flex-start;
+    width: 100%;
+    padding: 0; 
+    margin-top: 0; 
+    max-width: 1200px; 
+    height: 100vh; 
+}
+
+#playersDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin: 0; 
+    padding: 0;
+    width: 40%; 
+}
+
+    #playersDetails div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: #ffffff; 
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        margin-bottom: 10px;
+        transition: transform 0.2s;
+    }
+
+        #playersDetails div:hover {
+            transform: scale(1.05);
+        }
+
+    #playersDetails h3,
+    #playersDetails span {
+        margin: 0;
+        color: #333;
+    }
+
+.button-container {
+    margin: 3px; 
+    padding: 4px; 
+}
+
+button {
+    padding: 20px 20px;
+    font-size: 1rem;
+    background-color: #ff6f91; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+    button:hover {
+        background-color: #ff3b30; 
+        transform: translateY(-2px); 
+    }
+
+#cardsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 10px;
+}
+
+.card {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    background-color: #f0f0f0;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000000;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+
+@media (min-width: 600px) {
+    .card {
+        width: calc(25% - 20px);
+    }
+}
+
+@media (min-width: 800px) {
+    .card {
+        width: calc(20% - 20px); 
+    }
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+@import url('csend.css');
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #ffefba, #ff7e5f, #feb47b, #ff6f91, #8a2be2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: glow 2s infinite alternate;
+    margin-top: 30px;
+}
+
+
+
+button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.3s;
+    margin-bottom: 40px;
+}
+
+    button:hover {
+        background-color: #ff4500;
+        transform: scale(1.1);
+    }
+
+@media (max-width: 600px) {
+    body {
+        font-size: 0.6rem; /* מקטין את גודל הפונטים */
+        overflow-x: auto; /* מאפשר גלילה אופקית */
+        overflow-y: auto; /* מאפשר גלילה אנכית */
+    }
+
+    .header h2, .header h3 {
+        font-size: 0.8rem; /* מקטין את כותרות ההדר */
+        padding: 3px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #playersDetails {
+        width: 95%; /* מקטין את רוחב חלונית הפרטים */
+    }
+
+        #playersDetails div {
+            padding: 8px; /* מקטין את שטח הפנימי של פרטי השחקנים */
+        }
+
+    button {
+        padding: 8px 12px;
+        font-size: 0.7rem; /* מקטין את גודל הכפתורים */
+        border-radius: 20px; /* משמר מראה מעוגל גם בגדלים קטנים */
+    }
+
+    #cardsContainer {
+        display: flex; /* משתמש ב-flexbox עבור הכרטיסים */
+        overflow-x: auto; /* מאפשר גלילה אופקית */
+        gap: 5px; /* רווח בין הכרטיסים */
+        padding: 10px; /* רווח פנימי */
+    }
+
+    .card {
+        width: 40px; /* מקטין את הכרטיסים */
+        height: 40px; /* מקטין את הגובה */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.5rem; /* מקטין את גודל הטקסט בכרטיסים */
+    }
+}
+.card {
+    width: 100px; /* Default size */
+    height: 100px; /* Default size */
+    background-size: cover;
+    margin: 5px;
+}
+
+@media (max-width: 600px) { /* Adjust this value based on your needs */
+    .card {
+        width: 50%; /* 50% of the parent container */
+        height: auto; /* Maintain aspect ratio */
+    }
+}

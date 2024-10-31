@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="utf-8" />
+    <title>הזנת פרטים</title>
+    <script src="../JS/JsDetalis.js"></script>
+    <link href="../Css/CSdetalis.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="header">
+        <h1>:הזנת פרטים </h1>
+    </div>
+
+    <div class="content">
+        <label for="flowerTheme">בחרו צבע פרחים</label>
+        <select id="flowerTheme">
+            <option value="פרחים ורודים">פרחים ורודים</option>
+            <option value="פרחים כתומים">פרחים כתומים</option>
+            <option value="פרחים סגולים">פרחים סגולים</option>
+        </select>
+
+        <label for="difficultyLevel">בחרו רמת משחק:</label>
+        <select id="difficultyLevel">
+            <option value="קל">קל</option>
+            <option value="בינוני">בינוני</option>
+            <option value="קשה">קשה</option>
+        </select>
+
+        <label for="numPlayers">בחר מספר שחקנים:</label>
+        <select id="numPlayers" onchange="showPlayerInputs()">
+            <option value="">בחר מספר שחקנים</option> 
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <div id="playersContainer"></div> 
+
+        <button onclick="GoNext()">לתחילת משחק</button>
+        <p id="error" style="color: red;"></p> 
+    </div>
+</body>
+</html>

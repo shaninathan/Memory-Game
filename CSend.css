@@ -1,0 +1,119 @@
+﻿@import url('csend.css');
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #7f7fd5, #86a8e7, #91eae4);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: glow 2s infinite alternate;
+    margin-top: 30px; 
+}
+
+.result {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #fff;
+    border-radius: 20px;
+    padding: 40px;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 2s ease-in-out forwards, float 6s ease-in-out infinite;
+    transform: translateY(0);
+    opacity: 0;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.4s, transform 0.3s;
+    margin-bottom: 40px; 
+}
+
+    button:hover {
+        background-color: #ff4500;
+        transform: scale(1.1);
+    }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 0 0 20px #fff, 0 0 30px #ff4500;
+    }
+
+    100% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, 0.5), 0 0 30px #ff6347, 0 0 40px #ff4500;
+    }
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 99, 71, 0.6);
+    border-radius: 50%;
+    filter: blur(100px);
+    animation: move 8s infinite alternate;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(50vw, 50vh);
+    }
+}
+@media (max-width: 600px) { /* For mobile devices */
+    .result {
+        font-size: 1.2em; /* Smaller font size */
+    }
+
+    button {
+        padding: 8px 16px; /* Smaller button padding */
+        font-size: 0.9em; /* Smaller font size for button */
+    }
+
+    h1 {
+        font-size:15px;
+    }
+}

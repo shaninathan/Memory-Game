@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game</title>
+    <link href="../Css/scMain.css" rel="stylesheet" />
+    <style>
+        .sound-control {
+            position: absolute; 
+            top: 20px;
+            right: 20px; 
+            cursor: pointer; 
+            width: 50px; 
+            height: auto; 
+        }
+    </style>
+</head>
+<body>
+    <audio id="background-music" loop>
+        <source src="../tuns/%d7%94%d7%aa%d7%97%d7%9c%d7%94.mp3" type="audio/mpeg" />
+    </audio>
+
+    <div class="container">
+        <div class="intro">
+            <h1>ברוכים הבאים למשחק זיכרון-פרחים</h1>
+            <img src="../Img/מסך.gif" alt="מסך פתיחה" class="intro-img">
+            <p>!מוכן לאתגר זיכרון מרתק? בחר את המשחק והתחל לשחק עכשיו</p>
+            <a href="Detalis.html" class="start-btn">התחל לשחק</a>
+        </div>
+    </div>
+
+    <img id="sound-toggle" src="../Img/שמע.png" alt="Sound Control" class="sound-control" onclick="toggleSound()" />
+
+    <script>
+        var audio = document.getElementById('background-music');
+        var soundToggle = document.getElementById('sound-toggle');
+
+        window.onload = function () {
+            audio.play();
+        };
+
+        function toggleSound() {
+            if (audio.paused) {
+                audio.play();
+                soundToggle.src = "../Img/שמע.png"; 
+            } else {
+                audio.pause();
+                soundToggle.src = "../Img/ללא שמע.png"; 
+            }
+        }
+
+    </script>
+</body>
+</html>
+
